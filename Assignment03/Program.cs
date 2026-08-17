@@ -189,6 +189,24 @@ namespace Assignment03
             Console.WriteLine(((IsDequeued ? $"Printing :{result} " : "Queue Empty")));
             */
             #endregion
+            #region Exercise06
+           /* Stack<string> Browsers = new();
+            Browsers.Push("Google");
+            Browsers.Push("GitHub");
+            Browsers.Push("StackOverFlow");
+            Browsers.Push("Youtube");
+            Browsers.Push("Claude ai");
+            Console.WriteLine($"Current page: {Browsers.Peek()}");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"Leave Page: {Browsers.Pop()}");
+            }
+            Console.WriteLine($"Current page: {Browsers.Peek()}");
+            Browsers.Clear();
+            Console.WriteLine(Browsers.Count);
+            bool IsPop = Browsers.TryPop(out string result);
+            Console.WriteLine(IsPop ? "POP Sucessful" : "Stack is empty");*/
+            #endregion
 
         }
     }
