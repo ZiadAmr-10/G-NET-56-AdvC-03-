@@ -167,6 +167,28 @@ namespace Assignment03
             HashSet<int> sub = new() { 1, 2 };
             Console.WriteLine(sub.IsSubsetOf(SetA));*/
             #endregion
+            #region Exercise05
+            /*
+            Queue<string> Files = new();
+            Files.Enqueue("Report.pdf");
+            Files.Enqueue("Invoice.pdf");
+            Files.Enqueue("Letter.docx");
+            Files.Enqueue("Resume.pdf");
+            Files.Enqueue("Photo.jpg");
+            Console.WriteLine($"Count : {Files.Count}");
+            foreach (var file in Files)
+            {
+                Console.WriteLine(file);
+            }
+            Console.WriteLine($"Next : {Files.Peek()}");
+            while(Files.Count > 0)
+            {
+                Console.WriteLine($"Printing : {Files.Dequeue()}");
+            }
+            bool IsDequeued = Files.TryDequeue(out string result);
+            Console.WriteLine(((IsDequeued ? $"Printing :{result} " : "Queue Empty")));
+            */
+            #endregion
 
         }
     }
