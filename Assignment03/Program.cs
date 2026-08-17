@@ -125,7 +125,47 @@ namespace Assignment03
                     break;
                 }
                 Console.Write($"{x.Value} - ");
-            }*/            
+            }*/
+            #endregion
+            #region Exercise04
+            /*
+            HashSet<string> Emails = new(StringComparer.OrdinalIgnoreCase);
+            Emails.Add("ahmed@test.com");
+            Emails.Add("AHMED@test.com");
+            Emails.Add("sara@test.com");
+            Emails.Add("Sara@Test.Com");
+            Console.WriteLine($"Count : {Emails.Count}");
+            foreach(string email in Emails)
+            {
+                Console.WriteLine(email);
+            }
+            //Printed Count = 2 because HashSet uses a case insensitive comparer and not allow duplicate elements
+            HashSet<int> SetA = new() { 1,2,3,4,5};
+            HashSet<int> SetB = new() {4,5,6,7,8};
+            Console.WriteLine("==============Union -> All Elements without duplication===============");
+            HashSet<int> Union = new(SetA);
+            Union.UnionWith(SetB);   
+            foreach(int i in Union)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("===============Intersect With -> Common elements================");
+            HashSet<int> intersect= new(SetA);
+            intersect.IntersectWith(SetB);
+           foreach (int i in intersect)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("===============Except With -> elements in A except B ================");
+            HashSet<int> Except= new(SetA);
+            Except.ExceptWith(SetB);
+            foreach ( var i in Except)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("===============IS Subset===============");
+            HashSet<int> sub = new() { 1, 2 };
+            Console.WriteLine(sub.IsSubsetOf(SetA));*/
             #endregion
 
         }
