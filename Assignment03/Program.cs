@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             #region Exercise01
+            /*
             List<int> grades = new() { 85, 92, 78, 95, 88, 70, 100, 65 };
             foreach (int grade in grades)
             {
@@ -40,10 +41,42 @@
             foreach (var item in Gradess)
             {
                 Console.WriteLine(item);
+            }*/
+
+
+
+            #endregion
+            #region Exercise02
+            SortedList<int, string> Players = new()
+            {   [500] = "Ahmed",
+                [200] = "Sara",
+                [800] = "Ali",
+                [350] = "Mona"
+            };
+            Console.WriteLine("==========Print All Entries===========");
+            foreach(var i in Players)
+            {
+                Console.WriteLine($"{i.Key} - {i.Value} ");
             }
-
-
-
+            Console.WriteLine("==========Print First Key/Value");
+            Console.WriteLine($"First key : {Players.Keys[0]} - First Value : {Players.Values[0]}");
+            Console.WriteLine("============ if score 500 exists ? ============");
+            Console.WriteLine(Players.ContainsKey(500));
+            Console.WriteLine("===============The player with score 999==============");
+            if (Players.TryGetValue(999, out string result))
+            {
+                Console.WriteLine($"Result : {result}");
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
+            Console.WriteLine("===============Remove Score 200 and print the list updated=================");
+            Players.Remove(200);
+            foreach(var i in Players)
+            {
+                Console.WriteLine($"{i.Key} - {i.Value} ");
+            }
             #endregion
         }
     }
