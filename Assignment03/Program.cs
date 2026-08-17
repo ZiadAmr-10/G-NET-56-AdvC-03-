@@ -1,4 +1,6 @@
-﻿namespace Assignment03
+﻿using System.Diagnostics.Metrics;
+
+namespace Assignment03
 {
     internal class Program
     {
@@ -47,6 +49,7 @@
 
             #endregion
             #region Exercise02
+            /*
             SortedList<int, string> Players = new()
             {   [500] = "Ahmed",
                 [200] = "Sara",
@@ -76,8 +79,55 @@
             foreach(var i in Players)
             {
                 Console.WriteLine($"{i.Key} - {i.Value} ");
-            }
+            }*/
             #endregion
+            #region Exercise03
+            /*Dictionary<string, string> PhoneBook = new()
+            {
+                ["Ali"]="01234",
+                ["Ahmed"]="01256",
+                ["Aya"]="01278",
+                ["Mona"]="01291",
+            };
+            //Add Using [] -> Add if not added /updated if added 
+            PhoneBook["Omar"] = "01111";
+            //Handle The Exception With Try/Catch
+            try
+            {
+                PhoneBook.Add("Ali", "5555");
+            }
+            catch 
+            {
+                Console.WriteLine($"Can't add with the same key !");
+            }
+            bool isAdded = PhoneBook.TryAdd("Ali", "6666");
+            Console.WriteLine($"{((isAdded) ? "Add Successful": "Add Fail" )}");
+            bool isExist = PhoneBook.ContainsKey("Mostafa");
+            Console.WriteLine($"{((isExist) ? "Exist" : "Not Exist")}");
+            Console.WriteLine(PhoneBook.GetValueOrDefault("Mohamed","NotFound"));
+            int counter = 0;
+            foreach(var x  in PhoneBook)
+            {
+                counter++;
+                if (counter == PhoneBook.Count)
+                {
+                    Console.WriteLine($"{x.Key}");
+                    counter = 0;
+                    break;
+                }
+                Console.Write($"{x.Key} - ");
+            }
+            foreach(var x  in PhoneBook)
+            {  counter++;
+                if (counter == PhoneBook.Count)
+                {
+                    Console.Write($"{x.Value}");
+                    break;
+                }
+                Console.Write($"{x.Value} - ");
+            }*/            
+            #endregion
+
         }
     }
 } 
